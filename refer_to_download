@@ -1,2 +1,2 @@
-sudo apt install uuid-dev
 libcurl with openssl // ./configure --with-openssl && make
+eg.install curl && install libcurl4-openssl-dev

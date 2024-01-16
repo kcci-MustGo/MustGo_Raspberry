@@ -2,16 +2,7 @@
 
 bool videoStartFlag;
 bool videoStatusFlag;
-const char *currentPosHeaders[] = 
-{
-    "Connection", "close",
-    "Content-type", "application/json",
-    "Accept", "application/json",
-    "Content-Length", "",
-    0
-};
-
-const char *currentVideoHeaders[] = 
+const char *httpRequestHeaders[] = 
 {
     "Connection", "close",
     "Content-type", "application/json",
@@ -22,13 +13,15 @@ const char *currentVideoHeaders[] =
 
 int main(void)
 {
-    uuid_t uuid;
-    char uuid_str[37];
-
-    uuid_generate(uuid);
-    uuid_unparse(uuid, uuid_str);
-
-    printf("Generated UUID : %s\n", uuid_str);
+    struct HttpRequest addUserRequest = {
+        .method = "POST",
+        .path = "/db/addUser",
+        .headers = httpRequestHeaders,
+        .jsonBody = NULL
+    };
+    convertUuidToJsonBody(&addUserRequest);
+    sendHttpRequset(&addUserRequest);
+    
 
     return 0;
 }

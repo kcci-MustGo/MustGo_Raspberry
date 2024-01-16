@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.7.0)
 project(MustGo_raspi LANGUAGES C)
 
 # set C compiler
-set(CMAKE_C_COMPILER /Applications/Xcode.app/Contents/Developer/usr/bin/gcc)
+#set(CMAKE_C_COMPILER /Applications/Xcode.app/Contents/Developer/usr/bin/gcc)
+set(CMAKE_C_COMPILER gcc)
 # set the output folder
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/output)
 # set the src folder
@@ -13,7 +14,7 @@ find_package(CURL REQUIRED)
 find_package(Threads REQUIRED)
 
 # specify src files and execution file
-add_executable(MustGo_raspi ${src}/main.c ${src}/currentPosStreaming.c ${src}/videoStreaming.c)
+add_executable(MustGo_raspi ${src}/main.c ${src}/currentPosStreaming.c ${src}/videoStreaming.c ${src}/aboutRequest.c)
 
 target_compile_options(MustGo_raspi PRIVATE -g -Wall)
 
