@@ -20,7 +20,7 @@ target_compile_options(MustGo_raspi PRIVATE -g -Wall)
 
 
 target_include_directories(MustGo_raspi PRIVATE ${CMAKE_SOURCE_DIR}/hdr ${CURL_INCLUDE_DIRS} ${Threads_INCLUDE_DIRS})
-target_link_libraries(MustGo_raspi PRIVATE ${CURL_LIBRARIES} ${Threads_LIBRARIES})
+target_link_libraries(MustGo_raspi PRIVATE ${CURL_LIBRARIES} ${Threads_LIBRARIES} uuid)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -11,14 +11,25 @@
 #include <uuid/uuid.h>
 #include <stdbool.h>
 
+#define CHUNK_SIZE 2048
+
 struct HttpRequest 
 {
-    const char *method;
-    const char *path;
-    char *headers[10];
+    char *method;
+    char *path;
+    char **headers;
     char *jsonBody;
 };
-extern const char *httpRequestHeaders[];
+
+struct returnRequest
+{
+    unsigned char *buffer;
+    size_t len;
+    size_t bufLen;
+};
+
+extern char *httpRequestHeaders[];
+extern bool connectFlag;
 extern bool destFlag;
 extern bool videoStartFlag;
 extern bool videoStatusFlag;
@@ -27,4 +38,5 @@ extern char currentPosLongitude[];
 extern char jsonData[];
 
 void convertUuidToJsonBody(struct HttpRequest *request);
-void sendHttpRequset(const struct HttpRequest *request);
+struct returnRequest sendHttpRequest(const struct HttpRequest *request);
+size_t write_callback(char *ptr, size_t size, size_t nmemb, void *userdata);
