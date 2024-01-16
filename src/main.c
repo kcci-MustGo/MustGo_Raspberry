@@ -2,6 +2,23 @@
 
 bool videoStartFlag;
 bool videoStatusFlag;
+const char *currentPosHeaders[] = 
+{
+    "Connection", "close",
+    "Content-type", "application/json",
+    "Accept", "application/json",
+    "Content-Length", "",
+    0
+};
+
+const char *currentVideoHeaders[] = 
+{
+    "Connection", "close",
+    "Content-type", "application/json",
+    "Accept", "application/json",
+    "Content-Length", "",
+    0
+};
 
 int main(void)
 {

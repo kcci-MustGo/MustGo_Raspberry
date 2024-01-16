@@ -1,0 +1,17 @@
+Performing Curl Test HAVE_FSETXATTR_5 failed with the following output:
+Change Dir: /Users/5jong/vim/MustGo_Raspberry/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E env VERBOSE=1 /Applications/Xcode.app/Contents/Developer/usr/bin/make -f Makefile cmTC_b53e0/fast && /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_b53e0.dir/build.make CMakeFiles/cmTC_b53e0.dir/build
+Building C object CMakeFiles/cmTC_b53e0.dir/CurlTests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -Wextra -Wall -pedantic -Wbad-function-cast -Wconversion -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wno-long-long -Wno-multichar -Wpointer-arith -Wshadow -Wsign-compare -Wundef -Wunused -Wwrite-strings -Waddress -Wattributes -Wcast-align -Wdeclaration-after-statement -Wdiv-by-zero -Wempty-body -Wendif-labels -Wfloat-equal -Wformat-security -Wignored-qualifiers -Wmissing-field-initializers -Wmissing-noreturn -Wno-format-nonliteral -Wno-sign-conversion -Wno-system-headers -Wredundant-decls -Wold-style-definition -Wstrict-prototypes -Wtype-limits -Wunreachable-code -Wunused-parameter -Wvla -Wshift-sign-overflow -Wshorten-64-to-32 -Wlanguage-extension-token -Wdouble-promotion -Wenum-conversion -Wpragmas -Wunused-const-variable -Wunreachable-code-break -Wheader-guard -Wsometimes-uninitialized -Wcomma -Wmissing-variable-declarations -Wassign-enum -Wextra-semi-stmt -DHAVE_FSETXATTR_5  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_SYS_FILIO_H -DHAVE_SYS_WAIT_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_SOCKIO_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UN_H -DHAVE_SYS_XATTR_H -DHAVE_ARPA_INET_H -DHAVE_FCNTL_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_NETINET_UDP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_STDATOMIC_H -DHAVE_STDBOOL_H -DHAVE_STRINGS_H -DHAVE_TERMIOS_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk -mmacosx-version-min=14.1 -MD -MT CMakeFiles/cmTC_b53e0.dir/CurlTests.c.o -MF CMakeFiles/cmTC_b53e0.dir/CurlTests.c.o.d -o CMakeFiles/cmTC_b53e0.dir/CurlTests.c.o -c /Users/5jong/vim/MustGo_Raspberry/curl-8.5.0/CMake/CurlTests.c
+/Users/5jong/vim/MustGo_Raspberry/curl-8.5.0/CMake/CurlTests.c:380:26: error: too few arguments to function call, expected 6, have 5
+  fsetxattr(0, 0, 0, 0, 0);
+  ~~~~~~~~~              ^
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk/usr/include/sys/xattr.h:67:5: note: 'fsetxattr' declared here
+int fsetxattr(int fd, const char *name, const void *value, size_t size, u_int32_t position, int options);
+    ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_b53e0.dir/CurlTests.c.o] Error 1
+make: *** [cmTC_b53e0/fast] Error 2
+
+
