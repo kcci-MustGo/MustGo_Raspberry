@@ -26,10 +26,18 @@ struct returnRequest
     unsigned char *buffer;
     size_t len;
     size_t bufLen;
+    size_t err;
+};
+
+struct moveInfo
+{
+    double distance;
+    double direction;
 };
 
 extern char *httpRequestHeaders[];
 extern bool connectFlag;
+extern bool currentPosFlag;
 extern bool destFlag;
 extern bool videoStartFlag;
 extern bool videoStatusFlag;
@@ -37,6 +45,8 @@ extern char currentPosLatitude[];
 extern char currentPosLongitude[];
 extern char jsonData[];
 
-void convertUuidToJsonBody(struct HttpRequest *request);
+void convertDataToJsonBody(struct HttpRequest *request);
+void getVector(struct moveInfo *movementList, char **latitudeList, char**longitudeList, int listSize);
+double convertStrToDouble(char* value);
 struct returnRequest sendHttpRequest(const struct HttpRequest *request);
 size_t write_callback(char *ptr, size_t size, size_t nmemb, void *userdata);

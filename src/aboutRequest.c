@@ -21,16 +21,16 @@ size_t write_callback(char *ptr, size_t size, size_t nmemb, void *userdata)
     return realsize;
 }
 
-void convertUuidToJsonBody(struct HttpRequest *request)
+void convertDataToJsonBody(struct HttpRequest *request)
 {
     uuid_t uuid;
     char uuid_str[37];
     uuid_generate(uuid);
     uuid_unparse(uuid, uuid_str);
 
-    char dynamicJson[60];
+    char dynamicJson[100];
 
-    snprintf(dynamicJson, sizeof(dynamicJson), "{\"UUID\":\"%s\"}", uuid_str);
+    snprintf(dynamicJson, sizeof(dynamicJson), "{\"UUID\":\"%s\",\"LATITUDE\":\"%s\",\"LONGITUDE\":\"%s\"}", uuid_str, currentPosLatitude, currentPosLongitude);
     request->jsonBody = strdup(dynamicJson);
     //printf("jsonBody in convert func : %s\n", request->jsonBody);
 }
@@ -89,7 +89,10 @@ struct returnRequest sendHttpRequest(const struct HttpRequest *request)
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, (void *)&returnReq);
         printf("curl_perform\n");
         res = curl_easy_perform(curl);
-        if (!res)
+
+        if (res != CURLE_OK)
+            returnReq.err = 1;
+        if (connectFlag==false && res==CURLE_OK)
             connectFlag = true;
 
         //fprintf(stderr, "res msg : %d %s\n", (int)res, curl_easy_strerror(res));
