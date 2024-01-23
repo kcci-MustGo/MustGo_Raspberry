@@ -1,9 +1,0 @@
-/home/rojong/MustGo_raspi/build/CMakeFiles/MustGo_raspi.dir
-/home/rojong/MustGo_raspi/build/CMakeFiles/package.dir
-/home/rojong/MustGo_raspi/build/CMakeFiles/package_source.dir
-/home/rojong/MustGo_raspi/build/CMakeFiles/edit_cache.dir
-/home/rojong/MustGo_raspi/build/CMakeFiles/rebuild_cache.dir
-/home/rojong/MustGo_raspi/build/uuid/CMakeFiles/package.dir
-/home/rojong/MustGo_raspi/build/uuid/CMakeFiles/package_source.dir
-/home/rojong/MustGo_raspi/build/uuid/CMakeFiles/edit_cache.dir
-/home/rojong/MustGo_raspi/build/uuid/CMakeFiles/rebuild_cache.dir

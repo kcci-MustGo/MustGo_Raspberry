@@ -15,6 +15,7 @@ make
 2. build
     '''
     cd ~/MustGo_Raspberry/build
+    make clean
     cmake ..
     make
     '''

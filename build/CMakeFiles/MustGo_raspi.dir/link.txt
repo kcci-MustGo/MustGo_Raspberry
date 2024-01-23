@@ -1,1 +1,0 @@
-gcc CMakeFiles/MustGo_raspi.dir/src/main.c.o CMakeFiles/MustGo_raspi.dir/src/videoStreaming.c.o CMakeFiles/MustGo_raspi.dir/src/aboutRequest.c.o CMakeFiles/MustGo_raspi.dir/src/aboutVector.c.o -o ../output/MustGo_raspi  /usr/lib/x86_64-linux-gnu/libcurl.so -luuid -lm 
