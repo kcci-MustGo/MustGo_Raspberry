@@ -7,6 +7,12 @@
 
 
 # Prerequisite
+1. make curl
+'''
+./config
+make
+'''
+2. build
     '''
     cd ~/MustGo_Raspberry/build
     cmake ..
