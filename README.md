@@ -1,4 +1,5 @@
 ![](https://github.com/kcci-MustGo/MustGo_Raspberry/blob/main/img/mustgo_raspi.png)
+- combined raspberry pi 4 and stm32 nucleo board with servo motor
 
 # MustGo_Raspberry
 라즈베리파이에서 cloud의 db와 통신하여 
