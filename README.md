@@ -1,4 +1,4 @@
-![](https://github.com/kcci-MustGo/MustGo_Raspberry/main/img/mustgo_raspi.png)
+![](https://github.com/kcci-MustGo/MustGo_Raspberry/blob/main/img/mustgo_raspi.png)
 
 # MustGo_Raspberry
 라즈베리파이에서 cloud의 db와 통신하여 
