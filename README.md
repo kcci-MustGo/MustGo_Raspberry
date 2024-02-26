@@ -1,3 +1,5 @@
+![](https://github.com/kcci-MustGo/MustGo_Raspberry/main/img/mustgo_raspi.png)
+
 # MustGo_Raspberry
 라즈베리파이에서 cloud의 db와 통신하여 
 1. 로봇의 UUID 등을 db에 등록
